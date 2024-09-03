@@ -1,0 +1,21 @@
+@tailwind base;
+
+a {
+	text-decoration: none !important;
+}
+
+.urbix {
+	--charcoal: #373f51ff;
+	--celestial-blue: #008dd5ff;
+	--pale-dogwood: #dfbbb1ff;
+	--bright-pink-crayola: #f56476ff;
+	--cerise: #e43f6fff;
+}
+
+.wp-site-blocks {
+	height: 100%;
+}
+
+
+@tailwind components;
+@tailwind utilities;

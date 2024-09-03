@@ -1,0 +1,16 @@
+{
+  "name": "bte_header",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tail": "npx tailwindcss -i ./tailwind.css -o ./style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6"
+  }
+}
