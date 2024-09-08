@@ -1,25 +1,35 @@
+const langButton = document.querySelector("#lang-button");
+const langButtonParent = langButton.parentElement;
 const langSelection = document.querySelector("#lang-selection");
 const langItems = langSelection.querySelectorAll("li");
-const chevron = document.querySelector("#lang-dropdown")
+const dropdownIcon = document.querySelector("#lang-dropdown-icon")
 let isLangMenuClose = true;
 
 
 function rotateChevron(direction){
   if(direction==="left"){
-    chevron.style.transform="rotate(180deg)";
+    dropdownIcon.style.transform="rotate(180deg)";
     return;
   }
-  chevron.style.transform="rotate(90deg)";
+  dropdownIcon.style.transform="rotate(90deg)";
 }
 
 function toggleLangMenu(){
   isLangMenuClose = !isLangMenuClose;
+  langButtonParent.classList.toggle("active");
 }
 
-langItems.forEach(langItem => {
-  langItem.addEventListener("click",(e) => {
-    toggleLangMenu();
-    rotateChevron(isLangMenuClose ? "left" : "right");
-    // const lang=langItem.getAttribute("data-lang");
-  })
+langButton.addEventListener("click",()=>{
+  toggleLangMenu();
+  const direction = isLangMenuClose? "left" : "right";
+  rotateChevron(direction);
 })
+
+// langItems.forEach(langItem => {
+//   langItem.addEventListener("click",(e) => {
+//     toggleLangMenu();
+//     rotateChevron(isLangMenuClose ? "left" : "right");
+//     // const lang=langItem.getAttribute("data-lang");
+//   })
+// })
+

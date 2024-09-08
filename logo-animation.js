@@ -3,7 +3,7 @@ const navLogoRect = navLogo.getBoundingClientRect();
 const headerLogo = document.querySelector("#header_board_logo");
 
 function positionYElement(element,posY){
-  element.style.transform = `translateY(${posY}px)` 
+  element.style.transform = `translateY(${posY}px)`;
 }
 
 function checkElementPosition(element){
@@ -16,8 +16,6 @@ let initialHeaderLogoPosition,
     targetHeight,
     scrollDistance,
     heightDifference
-  
-console.log(window.scrollY)
 
 function setup(){
   const startAnimationBox = document.querySelector("#start_animation_box");
@@ -37,7 +35,7 @@ function setup(){
 
   scrollDistance = Math.round(headerLogoTargetArea.bottom - headerLogoRect.height - navLogoRect.top + window.scrollY);
   heightDifference = initialHeight - targetHeight;
-  const headerLogoHeight = 174/826*headerLogoTargetAreaMaxWidth;
+  const headerLogoHeight = 174 / 826 * headerLogoTargetAreaMaxWidth;
   headerLogo.style.height = `${headerLogoHeight}px`;
 
 }

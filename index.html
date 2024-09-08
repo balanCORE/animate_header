@@ -22,7 +22,7 @@
                 </svg>
             </div>
 
-            <div class="container mx-auto grid h-11 grid-cols-[1fr_3fr_1fr] items-center justify-end pr-8">
+            <div class="container mx-auto grid h-11 grid-cols-[1fr_3fr_1fr] items-center justify-end">
                 <nav class="col-start-2 flex justify-center">
                     <ul class="flex w-full justify-evenly space-x-4">
                         <li>
@@ -49,7 +49,7 @@
                     </ul>
                 </nav>
 
-                <div class="flex gap-5 text-right">
+                <div class="flex gap-5 text-right pr-20">
 
                     <a role="button"
                         class="my-auto w-full rounded-full bg-white px-16 py-2 text-center text-black transition-all hover:bg-[#ADA5A4] hover:text-white"
@@ -57,19 +57,21 @@
                         <!-- {__("Kontakt", "bte-plugin")} -->
                         Kontakt
                     </a>
+
                     <!-- LANGUAGE -->
-                    <div class="relative">
-                        <div
-                            class="absolute rounded-3xl outline px-3 outline-1 outline-white flex items-baseline bg-black transition-all">
-                            <ul id="lang-selection" class="flex flex-col items-start transition-all">
+                    <div class="relative group active">
+                        <div id="lang-button"
+                            class="absolute rounded-3xl outline px-3 outline-1 outline-white flex items-baseline bg-black cursor-pointer transition-all duration-500">
+                            <ul id="lang-selection" class="flex flex-col items-start group-[.active]:h-16">
                                 <li data-lang="en" class="px-2 py-2 cursor-pointer">
                                     <span>En</span>
                                 </li>
-                                <li data-lang="pl" class="absolute px-2 pb-2 cursor-pointer">
+                                <li data-lang="pl" class="absolute -bottom-0 px-2 pb-2 cursor-pointer invisible">
                                     <span>Pl</span>
                                 </li>
                             </ul>
-                            <div id="lang-dropdown" class="h-3 w-auto rotate-180 px-1 transition-all flex items-end">
+                            <div id="lang-dropdown-icon"
+                                class="h-3 w-auto rotate-180 px-1 transition-all flex items-end">
                                 <svg class="h-full w-auto" viewBox="0 0 12 9" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11 8.5L5.5 1L0.5 8.5" stroke="#fff" />
