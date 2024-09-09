@@ -1,25 +1,32 @@
+const langButton = document.querySelector("#lang-button");
+const langButtonParent = langButton.parentElement;
 const langSelection = document.querySelector("#lang-selection");
 const langItems = langSelection.querySelectorAll("li");
-const chevron = document.querySelector("#lang-dropdown")
+const dropdownIcon = document.querySelector("#lang-dropdown-icon")
 let isLangMenuClose = true;
 
 
 function rotateChevron(direction){
-  if(direction==="left"){
-    chevron.style.transform="rotate(180deg)";
+  if(direction==="bottom"){
+    dropdownIcon.style.transform="rotate(180deg)";
     return;
   }
-  chevron.style.transform="rotate(90deg)";
+  dropdownIcon.style.transform="rotate(0deg)";
 }
 
 function toggleLangMenu(){
   isLangMenuClose = !isLangMenuClose;
+  langButtonParent.classList.toggle("active");
 }
 
+langButton.addEventListener("click",()=>{
+  toggleLangMenu();
+  rotateChevron(isLangMenuClose? "bottom" : "top");
+}) 
+
 langItems.forEach(langItem => {
-  langItem.addEventListener("click",(e) => {
-    toggleLangMenu();
-    rotateChevron(isLangMenuClose ? "left" : "right");
-    // const lang=langItem.getAttribute("data-lang");
+  langItem.addEventListener("click",function(e) {
+    console.log(this.getAttribute("data-lang"))
   })
 })
+
