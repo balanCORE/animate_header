@@ -7,11 +7,11 @@ let isLangMenuClose = true;
 
 
 function rotateChevron(direction){
-  if(direction==="left"){
+  if(direction==="bottom"){
     dropdownIcon.style.transform="rotate(180deg)";
     return;
   }
-  dropdownIcon.style.transform="rotate(90deg)";
+  dropdownIcon.style.transform="rotate(0deg)";
 }
 
 function toggleLangMenu(){
@@ -21,15 +21,12 @@ function toggleLangMenu(){
 
 langButton.addEventListener("click",()=>{
   toggleLangMenu();
-  const direction = isLangMenuClose? "left" : "right";
-  rotateChevron(direction);
-})
+  rotateChevron(isLangMenuClose? "bottom" : "top");
+}) 
 
-// langItems.forEach(langItem => {
-//   langItem.addEventListener("click",(e) => {
-//     toggleLangMenu();
-//     rotateChevron(isLangMenuClose ? "left" : "right");
-//     // const lang=langItem.getAttribute("data-lang");
-//   })
-// })
+langItems.forEach(langItem => {
+  langItem.addEventListener("click",function(e) {
+    console.log(this.getAttribute("data-lang"))
+  })
+})
 

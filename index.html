@@ -8,7 +8,6 @@
     <title>index</title>
 </head>
 <!-- TODO: menu mobilne -->
-<!-- TODO: języki -->
 
 <body class="bg-black text-white">
 
@@ -59,22 +58,23 @@
                     </a>
 
                     <!-- LANGUAGE -->
-                    <div class="relative group active">
+                    <div class="relative group">
                         <div id="lang-button"
-                            class="absolute rounded-3xl outline px-3 outline-1 outline-white flex items-baseline bg-black cursor-pointer transition-all duration-500">
-                            <ul id="lang-selection" class="flex flex-col items-start group-[.active]:h-16">
-                                <li data-lang="en" class="px-2 py-2 cursor-pointer">
+                            class="absolute rounded-3xl outline px-3 outline-1 outline-white flex items-baseline bg-black cursor-pointer overflow-hidden">
+                            <ul id="lang-selection" class="flex flex-col items-start group-[.active]:text-[#ADA5A4]">
+                                <li data-lang="en" class="px-2 py-2 cursor-pointer hover:text-white">
                                     <span>En</span>
                                 </li>
-                                <li data-lang="pl" class="absolute -bottom-0 px-2 pb-2 cursor-pointer invisible">
+                                <li data-lang="pl"
+                                    class="px-2 pb-2 cursor-pointer hover:text-white hidden group-[.active]:block">
                                     <span>Pl</span>
                                 </li>
                             </ul>
                             <div id="lang-dropdown-icon"
-                                class="h-3 w-auto rotate-180 px-1 transition-all flex items-end">
+                                class="h-3 w-auto rotate-180 px-1 items-end transition-all duration-200 flex stroke-white group-[.active]:stroke-[#ADA5A4]">
                                 <svg class="h-full w-auto" viewBox="0 0 12 9" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 8.5L5.5 1L0.5 8.5" stroke="#fff" />
+                                    <path d="M11 8.5L5.5 1L0.5 8.5" />
                                 </svg>
                             </div>
                         </div>
