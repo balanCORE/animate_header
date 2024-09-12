@@ -5,48 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>example HEADER</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <title>mobile full screen nav</title>
 </head>
 
-<body class="">
-
-    <div class="nav fixed w-full h-24 flex items-center justify-between px-4 bg-pink-500 z-10">
-        <div class="items-left">
-            <a class="uppercase px-2" href="">services</a>
-            <a class="uppercase px-2" href="">rooms</a>
+<body>
+    <div class="flex h-full flex-col items-center justify-around py-5">
+        <ul class="flex flex-col items-center justify-center gap-5 text-white">
+            <li class="flex h-12 items-center text-2xl">
+                <a class="transition-all hover:text-[#ADA5A4]" href="https://bte.energy/#about">O&nbsp;nas</a>
+            </li>
+            <li class="flex h-12 items-center text-2xl">
+                <a class="transition-all hover:text-[#ADA5A4]" href="https://bte.energy/#products">Produkty</a>
+            </li>
+            <li class="flex h-12 items-center text-2xl">
+                <a class="transition-all hover:text-[#ADA5A4]" href="https://bte.energy/#instruction">Szkolenia</a>
+            </li>
+            <li class="flex h-12 items-center text-2xl">
+                <a class="transition-all hover:text-[#ADA5A4]"
+                    href="https://bte.energy/#cofinancing">Współpraca&nbsp;Tauron</a>
+            </li>
+            <li class="flex h-12 items-center text-2xl">
+                <a role="button"
+                    class="my-auto w-full rounded-full bg-white px-16 py-2 text-center text-black transition-all hover:bg-[#ADA5A4] hover:text-white"
+                    href="https://bte.energy/#contact">
+                    Kontakt
+                </a>
+            </li>
+        </ul>
+        <div class="flex w-full justify-center gap-3">
+            <a href="https://www.facebook.com/bte.energy/" class="h-12 w-12 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.164 20.076"
+                    class="h-full w-auto fill-white transition-all hover:fill-[#ADA5A4]">
+                    <path
+                        d="M686.773,293.07l.449-3.57h-3.446v-2.278c0-1.033.281-1.737,1.726-1.737h1.841v-3.192a23.953,23.953,0,0,0-2.684-.141c-2.657,0-4.475,1.663-4.475,4.718V289.5h-3.005v3.57h3.005v9.157h3.593V293.07Z"
+                        transform="translate(-677.178 -282.152)"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/bteenergy" class="h-12 w-12 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16.954"
+                    class="h-full w-auto fill-white transition-all hover:fill-[#ADA5A4]">
+                    <g transform="translate(-849.5 -284.175)">
+                        <path
+                            d="M676.3,465.175a2.056,2.056,0,1,1-1.8,2.04,1.932,1.932,0,0,1,1.8-2.04m-1.554,5.629h3.107v11.325h-3.107"
+                            transform="translate(175 -181)"></path>
+                        <path
+                            d="M680.744,471h3.307v1.521h.047a3.622,3.622,0,0,1,3.266-1.8c3.491,0,4.136,2.3,4.136,5.3v6.105h-3.447v-5.411c0-1.292-.025-2.952-1.793-2.952-1.8,0-2.07,1.406-2.07,2.857v5.506h-3.446"
+                            transform="translate(175 -181)"></path>
+                    </g>
+                </svg>
+            </a>
         </div>
-        <div class="items-right">
-            <a class="uppercase px-2" href="">booking</a>
-            <a class="uppercase px-2" href="">contact</a>
-        </div>
     </div>
-    <div class="logo-container border border-yellow-500 bg-yellow-200">
-        <h1 class="logo fixed z-20 top-0 left-1/2 -translate-x-1/2 border border-green-500">LOGO</h1>
-    </div>
-    <div class="w-full h-[100vh] border border-red-400 border-spacing-6 bg-slate-500"></div>
-    <div class="content w-full h-[100vh] relative px-4 bg-green-500">
-        <svg class="h-full w-auto" viewBox="0 0 57 56" fill="white" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M0.333984 0.166748V56.0001H56.1673V0.166748H0.333984ZM38.603 51.0855C35.5461 51.0855 32.6473 49.9948 30.3438 48.0239C33.9885 45.1026 36.3667 40.9548 36.5531 36.4102H36.574V20.9353C44.6304 21.2963 51.3246 29.1248 51.3246 38.3618C51.3246 45.3756 45.6165 51.0855 38.603 51.0855ZM17.8759 5.08137C20.9283 5.08137 23.8316 6.17351 26.1381 8.14443C22.4978 11.0687 20.1317 15.2135 19.9437 19.7566H19.9228V35.2286C11.8575 34.8809 5.15286 27.048 5.15286 17.8066C5.15286 10.7912 10.8609 5.08137 17.8759 5.08137ZM36.574 19.7745V19.7566H21.1014C21.458 11.6999 29.2905 4.99633 38.524 4.99633C45.5404 4.99633 51.2485 10.7002 51.2485 17.7215C51.2485 20.7741 50.1534 23.6776 48.1826 25.9842C45.2659 22.3422 41.1184 19.967 36.574 19.7745ZM8.29931 30.1931C11.2235 33.8365 15.371 36.2103 19.9228 36.3893V36.4087H35.3969C35.0329 44.464 27.2078 51.1645 17.9714 51.1645C10.9564 51.1645 5.24685 45.4517 5.24685 38.4364C5.24685 35.3897 6.33595 32.4952 8.29931 30.1931Z">
-            </path>
-        </svg>
-    </div>
-    <script>
-        ScrollTrigger.create({
-            animation: gsap.from(".logo", {
-                y: "50vh",
-                scale: 6,
-                yPercent: -50
-            }),
-            scrub: true,
-            trigger: ".content",
-            start: "top bottom",
-            endTrigger: ".content",
-            end: "top center"
-        })
-    </script>
 </body>
 
 </html>

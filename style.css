@@ -570,6 +570,55 @@ a {
   height: 100%;
 }
 
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+		stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
 .container {
   width: 100%;
 }
@@ -640,6 +689,10 @@ a {
   grid-column-start: 2;
 }
 
+.col-start-3 {
+  grid-column-start: 3;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -660,6 +713,15 @@ a {
 
 .hidden {
   display: none;
+}
+
+.aspect-auto {
+  aspect-ratio: auto;
+}
+
+.size-11 {
+  width: 2.75rem;
+  height: 2.75rem;
 }
 
 .h-11 {
@@ -694,6 +756,10 @@ a {
   height: 100%;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -704,6 +770,10 @@ a {
 
 .w-full {
   width: 100%;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .border-spacing-6 {
@@ -722,12 +792,20 @@ a {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
 
 .grid-cols-\[1fr_3fr_1fr\] {
   grid-template-columns: 1fr 3fr 1fr;
+}
+
+.grid-cols-\[2fr_5fr_2fr\] {
+  grid-template-columns: 2fr 5fr 2fr;
 }
 
 .grid-cols-\[70\%_1fr\] {
@@ -774,12 +852,29 @@ a {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .justify-evenly {
   justify-content: space-evenly;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -792,8 +887,8 @@ a {
   overflow: hidden;
 }
 
-.rounded-3xl {
-  border-radius: 1.5rem;
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .rounded-full {
@@ -863,8 +958,8 @@ a {
   background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
-.stroke-slate-500 {
-  stroke: #64748b;
+.fill-white {
+  fill: #fff;
 }
 
 .stroke-white {
@@ -875,9 +970,8 @@ a {
   padding: 1rem;
 }
 
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-16 {
@@ -900,6 +994,11 @@ a {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -910,8 +1009,9 @@ a {
   padding-bottom: 1rem;
 }
 
-.pb-2 {
-  padding-bottom: 0.5rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pb-4 {
@@ -947,6 +1047,11 @@ a {
   line-height: 1.25rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -979,10 +1084,6 @@ a {
   transition-duration: 150ms;
 }
 
-.duration-500 {
-  transition-duration: 500ms;
-}
-
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -990,6 +1091,10 @@ a {
 .hover\:bg-\[\#ADA5A4\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(173 165 164 / var(--tw-bg-opacity));
+}
+
+.hover\:fill-\[\#ADA5A4\]:hover {
+  fill: #ADA5A4;
 }
 
 .hover\:text-\[\#ADA5A4\]:hover {
@@ -1002,20 +1107,8 @@ a {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.group.active .group-\[\.active\]\:visible {
-  visibility: visible;
-}
-
 .group.active .group-\[\.active\]\:block {
   display: block;
-}
-
-.group.active .group-\[\.active\]\:h-16 {
-  height: 4rem;
-}
-
-.group.active .group-\[\.active\]\:stroke-current {
-  stroke: currentColor;
 }
 
 .group.active .group-\[\.active\]\:stroke-\[\#ADA5A4\] {
@@ -1031,6 +1124,20 @@ a {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 }
 
